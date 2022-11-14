@@ -16,10 +16,8 @@ body {
     font-weight: 400;
     font-size: 16px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
 }
   
 header, section, main, nav, footer, article, figure, hgroup {
@@ -127,6 +125,7 @@ h4, h5, h6, p {
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
+    min-height: 100vh;
     width: 100%;
     margin: auto;
 }
@@ -182,6 +181,11 @@ h4, h5, h6, p {
 .title-section {
     font-size: 45px;
     margin-bottom: 3rem;
+    
+}
+
+.cars-container {
+    margin-top: 100px;
 }
 
 

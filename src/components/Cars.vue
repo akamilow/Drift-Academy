@@ -1,27 +1,50 @@
 <template>
-    <div>
-        <h2 class="title-section">Choose your car!</h2>
-        <!-- <iframe id="video" width="750" height="420" src="https://www.youtube.com/embed/J252oda1N8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  <div class="cars-container">
+      <div>
+          <h2 class="title-section">Choose your car!</h2>
+          <!-- <iframe id="video" width="750" height="420" src="https://www.youtube.com/embed/J252oda1N8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      </div>
+      <swiper
+          :slidesPerView="1"
+          :spaceBetween="30"
+          :loop="true"
+          :autoplay="{
+              delay: 10000,
+              disableOnInteraction: false,
+          }"
+          :pagination="{
+              clickable: true,
+          }"
+          :navigation="true"
+          :modules="modules"
+          class="mySwiper"
+        >
+        <swiper-slide>
+          <img src="@/assets/img/rx7.jpg">
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/assets/img/gtr-r34.jpg">
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/assets/img/s15.jpg">
+        </swiper-slide>
+      </swiper>
+  </div>
+  <div>
+    <h2 class="title-section">Choose your car!</h2>
+    <h3 class="description-hero">Lorem ipsum dolor sit amet consectetur adipiscing elit, rhoncus fusce nam feugiat massa tellus euismod, lobortis tortor class in ut inceptos. Ridiculus viverra dapibus.</h3>
+  </div>
+  <div class="hero" id="hero">
+    <div class="container">
+        <hgroup>
+            <h1 class="title-hero"><span class="first-title">Become a master</span>Drift Academy</h1>
+            <h3 class="description-hero">Lorem ipsum dolor sit amet consectetur adipiscing elit, rhoncus fusce nam feugiat massa tellus euismod, lobortis tortor class in ut inceptos. Ridiculus viverra dapibus.</h3>
+        </hgroup>
+        <figure>
+            <img class="image-hero img-responsive" src="@/assets/img/s15.jpg">
+        </figure>
     </div>
-    <swiper
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :loop="true"
-        :autoplay="{
-            delay: 5500,
-            disableOnInteraction: false,
-        }"
-        :pagination="{
-            clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper"
-    >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    </swiper>
+  </div>
 </template>
 
 <script>
@@ -58,26 +81,6 @@ export default {
   margin-right: auto;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: rgb(158, 94, 94);
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -86,10 +89,11 @@ export default {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color: rgb(39, 205, 53);
+    color: #e79c12;
+    font-weight: bold;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: rgb(58, 218, 30);
+    background-color: #e79c12;
 }
 </style>
